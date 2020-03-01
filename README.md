@@ -2,4 +2,4 @@
 bitcoinkollen.se
 
 
-$ ng build --prod --output-path docs --base-href bitcoinkollen
+$ ng build --prod --output-path docs --base-href coronakollen
