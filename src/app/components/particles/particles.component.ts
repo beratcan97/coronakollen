@@ -24,7 +24,7 @@ export class ParticlesComponent implements OnInit {
       'left': 0,
       'right': 0,
       'bottom': 0,
-      'background-color': '#0066FF'
+      'background-color': 'black'
     };
 
     this.myParams = {
@@ -37,7 +37,7 @@ export class ParticlesComponent implements OnInit {
           }
         },
         "color": {
-          "value": "#f2a900"
+          "value": "#f54242"
         },
         "shape": {
           "type": "circle",

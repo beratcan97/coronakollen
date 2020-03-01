@@ -1,19 +1,22 @@
 <div class="vh-100 d-flex justify-content-between align-items-center flex-column">
   <div class="d-flex flex-row-reverse vw-100">
-    <a href="https://github.com/beratcan97/bitcoinkollen" class="m-2">
+    <a href="https://github.com/beratcan97/coronakollen" class="m-2">
       <img alt="github logo link" src="assets/images/Octocat.png" width="50" height="50">
     </a>
   </div>
   <div class='d-flex  flex-row'>
-    <img width="100px" height="100px" alt="Bitcoin logo" src="https://bitcoin.org/img/icons/opengraph.png?1581019563">
+    <img width="100px" height="100px" alt="Bitcoin logo" src="https://images.newscientist.com/wp-content/uploads/2020/01/27123401/f0070229-coronavirus_artwork-spl.jpg?width=300">
     <div class='d-flex flex-column align-items-center justify-content-center'>
-      <h1 class='text-white mb-2' *ngIf="btcPriceInSEK; else loadingSpinner">{{btcPriceInSEK | number}} SEK</h1>
+      <h4 class='text-white mb-2'>Antal smittade personer i Sverige: 12</h4>
       <hr class="m-0 bg-white">
-      <h1 class="text-white m-0" *ngIf="btcPriceInUSD; else loadingSpinner">{{btcPriceInUSD | number}} $</h1>
+      <h4 class="text-white m-0">Göteborg: 4</h4>
+      <h4 class="text-white m-0">Stockholm: 3</h4>
+      <h4 class="text-white m-0">Uppsala: 2</h4>
+      <h4 class="text-white m-0">Jönköping : 2</h4>
     </div>
   </div>
   <div>
-    <p class="font-weight-lighter text-white">Priset uppdateras var 10:e sekund</p>
+    <p class="font-weight-lighter text-white"></p>
   </div>
 </div>
 
