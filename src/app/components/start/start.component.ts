@@ -20,7 +20,7 @@ export class StartComponent implements OnInit {
     this.getDATA();
 
     setInterval(() => {
-      this.getDATA();
+      // this.getDATA();
     }, 10000)
   }
 
