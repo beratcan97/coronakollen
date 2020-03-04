@@ -1,8 +1,8 @@
-import { Injectable } from '@angular/core';
+import * as core from '@angular/core';
 import { Observable, of } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 
-@Injectable({
+@core.Injectable({
   providedIn: 'root'
 })
 export class BitcoinDataService {
@@ -14,6 +14,6 @@ export class BitcoinDataService {
   // }
 
   getBTCDataFromCoinBase(currency): Observable<any> {
-    return this.http.get('https://api.coinbase.com/v2/prices/spot?currency=' + currency);
+    return this.http.get('https://en.wikipedia.org/wiki/2020_coronavirus_outbreak_in_Sweden');
   }
 }

@@ -13,8 +13,7 @@ export class StartComponent implements OnInit {
   btcPriceInUSD;
 
   constructor(
-    private bitcoinDataService: BitcoinDataService,
-    private currencyConverterService: CurrencyConverterService) { }
+    private bitcoinDataService: BitcoinDataService) { }
 
   ngOnInit() {
     this.getDATA();
@@ -28,13 +27,8 @@ export class StartComponent implements OnInit {
     this.bitcoinDataService.getBTCDataFromCoinBase('SEK')
     .subscribe(
       DATA => {
-        this.btcPriceInSEK = Math.round(DATA.data.amount);
-      }
-    );
-    this.bitcoinDataService.getBTCDataFromCoinBase('USD')
-    .subscribe(
-      DATA => {
-        this.btcPriceInUSD = Math.round(DATA.data.amount);
+        console.log(DATA);
+        // this.btcPriceInSEK = Math.round(DATA.data.amount);
       }
     );
   }
