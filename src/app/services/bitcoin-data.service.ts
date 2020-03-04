@@ -14,6 +14,7 @@ export class BitcoinDataService {
   // }
 
   getBTCDataFromCoinBase(currency): Observable<any> {
-    return this.http.get('https://en.wikipedia.org/wiki/2020_coronavirus_outbreak_in_Sweden');
+    return this.http.get('http://en.wikipedia.org/w/api.php?format=json&action=query&prop=extracts&pageids=63239190&exlimit=2&origin=*');
+    //return this.http.get('https://en.wikipedia.org/wiki/2020_coronavirus_outbreak_in_Sweden&origin=*');
   }
 }

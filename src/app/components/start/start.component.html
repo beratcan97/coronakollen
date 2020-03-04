@@ -8,21 +8,15 @@
     <img width="100px" height="200px" alt="Bitcoin logo"
       src="https://images.newscientist.com/wp-content/uploads/2020/01/27123401/f0070229-coronavirus_artwork-spl.jpg?width=300">
     <div class='d-flex flex-column align-items-center justify-content-center'>
-      <div>
-        <h4 class='text-white mb-2'>Antal smittade personer i Sverige: 15</h4>
-        <hr class="m-0 bg-white">
-        <h4 class="text-white m-0">Stockholm: 5</h4>
-        <h4 class="text-white m-0">Göteborg: 4</h4>
-        <h4 class="text-white m-0">Uppsala: 2</h4>
-        <h4 class="text-white m-0">Jönköping: 2</h4>
-        <h4 class="text-white m-0">Västra Götaland: 2</h4>
-        <h4 class="text-white m-0">Misstänkt smittade: 42</h4>
-      </div>
+      <h1 class="text-white">
+        {{wikiRawDATA}} Personer
+      </h1>
     </div>
   </div>
   <div>
-    <p class="font-weight-lighter text-white"></p>
+
   </div>
+  <p class="font-weight-lighter text-white position-fixed">Antal smittade personer i Sverige</p>
 </div>
 
 <ng-template #loadingSpinner>

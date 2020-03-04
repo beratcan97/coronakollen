@@ -2,6 +2,10 @@ hr {
   width: 180px;
 }
 
+.position-fixed {
+  top: 90vh;
+}
+
 
 .rotate {
     animation: rotation 8s infinite linear;
