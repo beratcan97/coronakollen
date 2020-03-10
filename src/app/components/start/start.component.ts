@@ -15,14 +15,10 @@ export class StartComponent implements OnInit {
 
   ngOnInit() {
     this.getDATA();
-
-    setInterval(() => {
-      // this.getDATA();
-    }, 10000);
   }
 
   getDATA(): void {
-    this.bitcoinDataService.getBTCDataFromCoinBase("SEK").subscribe(DATA => {
+    this.bitcoinDataService.getCoronaDataFromWikipediApi().subscribe(DATA => {
       let s = DATA.query.pages[63239190].extract;
       let htmlObject = document.createElement("div");
       htmlObject.innerHTML = s;
@@ -35,7 +31,7 @@ export class StartComponent implements OnInit {
         finalNumber = finalNumber + number;
       });
 
-      this.wikiRawDATA = finalNumber;
+      this.wikiRawDATA = finalNumber.slice(0,3);
     });
   }
 }

@@ -9,12 +9,11 @@ export class BitcoinDataService {
 
   constructor(private http: HttpClient) { }
 
-  // getBTCData(): Observable<any> {
-  //   return this.http.get('https://api.coinbase.com/v2/prices/spot?currency=SEK');
-  // }
-
-  getBTCDataFromCoinBase(currency): Observable<any> {
+  getCoronaDataFromWikipediApi(): Observable<any> {
     return this.http.get('https://en.wikipedia.org/w/api.php?format=json&action=query&prop=extracts&pageids=63239190&exlimit=2&origin=*');
-    //return this.http.get('https://en.wikipedia.org/wiki/2020_coronavirus_outbreak_in_Sweden&origin=*');
+  }
+
+  getCoronaDataFromScrapingWikipedi(): Observable<any> {
+    return this.http.get('');
   }
 }
