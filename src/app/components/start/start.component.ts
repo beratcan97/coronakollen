@@ -18,6 +18,7 @@ export class StartComponent implements OnInit {
   }
 
   getDATA(): void {
+    /*
     this.bitcoinDataService.getCoronaDataFromWikipediApi().subscribe(DATA => {
       let s = DATA.query.pages[63239190].extract;
       let htmlObject = document.createElement("div");
@@ -31,7 +32,10 @@ export class StartComponent implements OnInit {
         finalNumber = finalNumber + number;
       });
 
-      this.wikiRawDATA = finalNumber.slice(0,3);
+      // this.wikiRawDATA = finalNumber.slice(0,3);
     });
+  */
+
+    this.wikiRawDATA = 351;
   }
 }
