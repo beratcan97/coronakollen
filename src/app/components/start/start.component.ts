@@ -18,24 +18,21 @@ export class StartComponent implements OnInit {
   }
 
   getDATA(): void {
-    /*
     this.bitcoinDataService.getCoronaDataFromWikipediApi().subscribe(DATA => {
+
       let s = DATA.query.pages[63239190].extract;
       let htmlObject = document.createElement("div");
       htmlObject.innerHTML = s;
 
-      const rawDataString = htmlObject.getElementsByTagName("p")[3].innerHTML;
-      const rawDataStringArray = rawDataString.split(",");
-      var dataNumberArray = rawDataStringArray[1].match(/\d/g);
-      let finalNumber = "";
-      dataNumberArray.forEach(number => {
-        finalNumber = finalNumber + number;
-      });
+      const tmpRawDataString = htmlObject.getElementsByTagName("p")[4].innerHTML;
 
-      // this.wikiRawDATA = finalNumber.slice(0,3);
+      const rawDataString = tmpRawDataString.substring(
+        tmpRawDataString.lastIndexOf("there are") + 1, 
+        tmpRawDataString.lastIndexOf("confirmed cases in Sweden")
+      );
+      
+      const finalNumber = rawDataString.substring(9);
+      this.wikiRawDATA = finalNumber;
     });
-  */
-
-    this.wikiRawDATA = 351;
   }
 }
