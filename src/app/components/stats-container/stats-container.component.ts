@@ -8,7 +8,7 @@ import { BitcoinDataService } from "../../services/bitcoin-data.service";
 })
 export class StatsContainerComponent implements OnInit {
   isLoaded = false;
-  wikiRawDATA;
+  wikiRawDATA = "687";
 
   constructor(private bitcoinDataService: BitcoinDataService) {}
 
