@@ -1,3 +1,11 @@
+<div class="d-flex justify-content-center flex-column">
+  <app-stats-container></app-stats-container>
+  <app-toast-container></app-toast-container>
+</div>
+
+
+
+<!--
 <div class="vh-100 d-flex justify-content-between align-items-center flex-column">
   <div class="d-flex flex-row-reverse vw-100">
     <a href="https://github.com/beratcan97/coronakollen" class="m-2">
@@ -5,54 +13,17 @@
     </a>
   </div>
   <div class='d-flex  flex-row'>
-    <!-- <img alt="Sick emoji" src="assets/images/sickEmoji.png" width="100" height="100"> -->
-    <div class='d-flex flex-column align-items-center justify-content-center'>
-      <h1 class="text-white m-0" *ngIf="wikiRawDATA; else loadingSpinner">
-        {{wikiRawDATA}} St
-      </h1>
-      <p class="font-weight-lighter text-white m-0 mb-1">personer smittade i Sverige</p>
-      <hr class="m-0 bg-white">
-      <p class="font-weight-lighter text-white mt-1 mb-0">Dödsfall: 1</p>
-      <p class="font-weight-lighter text-white">Tillfrisknade: 1</p>
-
-
-      <div class="toast show mx-5">
-        <div class="toast-header">
-          Läget i Stockholm just nu
-        </div>
-        <div class="toast-body">
-          Region Stockholm har valt att sluta testa personer som inte är inlagda på sjukhus eller tillhör en riskgrupp. 
-          Läs mer<a href="https://www.1177.se/Stockholm/sa-fungerar-varden/varden-i-stockholms-lan/om-corona/laget-i-stockholm-just-nu/"> här.</a>
-        </div>
-      </div>
-
-      <div class="toast show mx-5">
-        <div class="toast-header">
-          Svenska myndigheter
-        </div>
-        <div class="toast-body">
-          <p class="m-0"><a href="https://www.krisinformation.se/">Krisinformation.se</a></p>
-          <p class="m-0"><a href="https://www.msb.se/">MSB, (myndigheten för samhällsskydd och beredskap)</a></p>
-          <p class="m-0"><a href="https://www.folkhalsomyndigheten.se/">Folkhälsomyndig-heten</a></p>
-          <p class="m-0"><a href="https://www.1177.se/">1177, vårdguiden</a></p>
-        </div>
-      </div>
-
+    
+    <div class='d-flex flex-column'>
+      <app-stats-container></app-stats-container>
+      <app-toast-container></app-toast-container>
     </div>
+
   </div>
   <div>
     <a href="https://en.wikipedia.org/wiki/2020_coronavirus_outbreak_in_Sweden"><p class="font-weight-lighter text-dark">Källa</p></a>
   </div>
 </div>
-
-<ng-template #loadingSpinner>
-  <div class="spinner-border text-danger mb-3" role="status">
-    <span class="sr-only">Loading...</span>
-  </div>
-</ng-template>
-
-<script
-  id="_waunfd">var _wau = _wau || []; _wau.push(["dynamic", "ens6il9n4p", "nfd", "c4302bffffff", "small"]);</script>
-<script async src="//waust.at/d.js"></script>
+-->
 
 <app-particles></app-particles>

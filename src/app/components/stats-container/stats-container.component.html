@@ -1,0 +1,17 @@
+<div class='d-flex flex-column align-items-center justify-content-center'>
+
+    <h1 class="text-white m-0" *ngIf="wikiRawDATA; else loadingSpinner">
+        {{wikiRawDATA}} St
+    </h1>
+    <p class="font-weight-lighter text-white m-0 mb-1">personer smittade i Sverige</p>
+    <hr class="m-0 bg-white">
+    <p class="font-weight-lighter text-white mt-1 mb-0">Dödsfall: 1</p>
+    <p class="font-weight-lighter text-white">Tillfrisknade: 1</p>
+</div>
+
+
+<ng-template #loadingSpinner>
+    <div class="spinner-border text-danger mb-3" role="status">
+        <span class="sr-only">Loading...</span>
+    </div>
+</ng-template>
