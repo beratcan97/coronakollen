@@ -13,7 +13,7 @@ export class StatsContainerComponent implements OnInit {
   constructor(private bitcoinDataService: BitcoinDataService) {}
 
   ngOnInit() {
-    this.getDATA();
+    // this.getDATA();
   }
 
   getDATA(): void {
