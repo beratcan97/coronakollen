@@ -71,13 +71,13 @@
     <!-- <img alt="Sick emoji" src="assets/images/sickEmoji.png" width="100" height="100"> -->
     <div class='d-flex flex-column align-items-center justify-content-center'>
       
-      <h1 class="text-white" *ngIf="wikiRawDATA; else loadingSpinner">
+      <h1 class="" *ngIf="wikiRawDATA; else loadingSpinner">
         {{wikiRawDATA}} St
       </h1>
-      <p class="font-weight-lighter text-white m-0 mb-1">personer smittade i Sverige</p>
-      <hr class="m-0 bg-white">
-      <p class="font-weight-lighter text-white mt-1 mb-0">Dödsfall: 1</p>
-      <p class="font-weight-lighter text-white">Tillfrisknade: 1</p>
+      <p class="font-weight-lighter m-0 mb-1">personer smittade i Sverige</p>
+      <hr class="m-0">
+      <p class="font-weight-lighter mt-1 mb-0">Dödsfall: 1</p>
+      <p class="font-weight-lighter ">Tillfrisknade: 1</p>
 
       <div class="card bg-light mb-3" style="max-width: 18rem;">
         <div class="card-header">
@@ -157,6 +157,7 @@
   </div>
 </ng-template>
 
+<!--
 <script
   id="_waunfd">var _wau = _wau || []; _wau.push(["dynamic", "ens6il9n4p", "nfd", "c4302bffffff", "small"]);</script>
 <script async src="//waust.at/d.js"></script>
