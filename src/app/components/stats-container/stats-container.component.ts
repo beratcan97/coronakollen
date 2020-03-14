@@ -31,7 +31,7 @@ export class StatsContainerComponent implements OnInit {
       );
 
 
-      const finalNumber = rawDataString.substring(15);
+      const finalNumber = rawDataString.substring(42);
       this.wikiRawDATA = finalNumber;
     });
   }
