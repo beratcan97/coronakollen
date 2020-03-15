@@ -32,6 +32,9 @@ export class CrudService {
   updateCurrentCaseInSweden(currentCases) {
     const currentCasesInSweden = {
       currentCasesInSweden: currentCases,
+      deaths: 2,
+      recovered: 1,
+      severeCases: 3,
       displayDate: this.dateDATA.getFullYear() + '-' + (this.dateDATA.getMonth() + 1) + '-' + this.dateDATA.getDate(),
       date: this.dateDATA
     };

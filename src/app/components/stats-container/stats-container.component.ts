@@ -19,12 +19,13 @@ export class StatsContainerComponent implements OnInit {
   ngOnInit() {
     // this.crudService.updateCurrentCaseInSweden(4);
     this.getCurrentCaseInSweden();
-    this.getDATAFromWikipediaAndUpdateDB();
+   
   }
 
   getCurrentCaseInSweden(): void {
     this.crudService.getCurrentCaseInSweden().subscribe(DATA => {
       this.currentCasesInSweden = DATA.payload.data();
+      this.getDATAFromWikipediaAndUpdateDB();
     });
   }
 
@@ -43,9 +44,9 @@ export class StatsContainerComponent implements OnInit {
 
       const finalNumber = rawDataString.substring(42);
 
-      if ((this.currentCasesInSweden !== finalNumber) && finalNumber.length < 6 && finalNumber.length > 3) {
+      if (this.currentCasesInSweden.currentCasesInSweden < parseInt(finalNumber, 10)) {
         // Updates DB
-        this.crudService.updateCurrentCaseInSweden(finalNumber);
+        this.crudService.updateCurrentCaseInSweden(parseInt(finalNumber, 10));
       }
     });
   }
