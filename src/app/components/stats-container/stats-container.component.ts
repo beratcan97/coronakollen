@@ -46,7 +46,7 @@ export class StatsContainerComponent implements OnInit {
         }
       }
 
-      if (9 < finalNumber) {
+      if (9 < finalNumber && finalNumber > this.currentCasesInSweden.currentCasesInSweden) {
         const currentCasesInSwedenToUpdate = {
         currentCasesInSweden: finalNumber,
         deaths: this.currentCasesInSweden.deaths,
