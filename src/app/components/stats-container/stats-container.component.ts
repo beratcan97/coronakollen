@@ -9,7 +9,12 @@ import { CrudService } from "../../services/crud.service";
 })
 export class StatsContainerComponent implements OnInit {
   isLoaded = false;
-  currentCasesInSweden;
+  currentCasesInSweden = {
+    currentCasesInSweden: 1024,
+    deaths: 2,
+    recovered: 1,
+    severeCases: 3,
+  }
 
   constructor(
     private bitcoinDataService: BitcoinDataService,
@@ -17,15 +22,12 @@ export class StatsContainerComponent implements OnInit {
   ) {}
 
   ngOnInit() {
-    this.getCurrentCaseInSweden();
-
-
-   
+    // this.getCurrentCaseInSweden();  
   }
-
+/*
   getCurrentCaseInSweden(): void {
     this.crudService.getCurrentCaseInSweden().subscribe(DATA => {
-      this.currentCasesInSweden = DATA.payload.data();
+      // this.currentCasesInSweden = DATA.payload.data();
       this.getDATAFromWikipediaAndUpdateDB();
     });
   }
@@ -46,5 +48,5 @@ export class StatsContainerComponent implements OnInit {
         this.crudService.updateCurrentCaseInSweden(parseInt(finalNumber, 10));
       }
     });
-  }
+  }*/
 }
