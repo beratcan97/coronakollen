@@ -42,7 +42,8 @@ export class CrudService {
   }
   
   getCurrentCaseInSweden() {
-    return this.angularFirestore.collection('currentCasesInSweden').doc('2HyjMvn4c6gw1J1w36Cy').snapshotChanges();
+    return this.angularFirestore.collection('currentCasesInSweden')
+      .doc('2HyjMvn4c6gw1J1w36Cy').snapshotChanges();
   }
 
   getCurrentCasesInSweden() {
