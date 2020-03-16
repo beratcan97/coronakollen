@@ -6,7 +6,6 @@ import { AngularFirestore } from '@angular/fire/firestore';
 })
 export class CrudService {
 
-  dateDATA = new Date();
 
   constructor(
     private angularFirestore: AngularFirestore) {}
@@ -29,21 +28,14 @@ export class CrudService {
   };
   */
 
-  updateCurrentCaseInSweden(currentCases) {
-    const currentCasesInSweden = {
-      currentCasesInSweden: currentCases,
-      deaths: 2,
-      recovered: 1,
-      severeCases: 3,
-      displayDate: this.dateDATA.getFullYear() + '-' + (this.dateDATA.getMonth() + 1) + '-' + this.dateDATA.getDate(),
-      date: this.dateDATA
-    };
-    return this.angularFirestore.collection('currentCasesInSweden').doc('2HyjMvn4c6gw1J1w36Cy').set(currentCasesInSweden);
+  updateCurrentCaseInSweden(currentCasesInSwedenToUpdate) {
+    return this.angularFirestore.collection('currentCasesInSweden')
+      .doc('currentCasesInSwedenDoc').set(currentCasesInSwedenToUpdate);
   }
   
   getCurrentCaseInSweden() {
     return this.angularFirestore.collection('currentCasesInSweden')
-      .doc('2HyjMvn4c6gw1J1w36Cy').snapshotChanges();
+      .doc('currentCasesInSwedenDoc').snapshotChanges();
   }
 
   getCurrentCasesInSweden() {
