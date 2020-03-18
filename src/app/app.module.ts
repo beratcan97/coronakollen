@@ -20,6 +20,8 @@ import { ParticlesModule } from 'angular-particle';
 import { ParticlesComponent } from './components/particles/particles.component';
 import { ToastContainerComponent } from './components/toast-container/toast-container.component';
 import { StatsContainerComponent } from './components/stats-container/stats-container.component';
+import { AdminPageComponent } from './components/admin-page/admin-page.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -29,6 +31,7 @@ import { StatsContainerComponent } from './components/stats-container/stats-cont
     ParticlesComponent,
     ToastContainerComponent,
     StatsContainerComponent,
+    AdminPageComponent,
   ],
   imports: [
     BrowserModule,
@@ -38,6 +41,7 @@ import { StatsContainerComponent } from './components/stats-container/stats-cont
     BrowserModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFirestoreModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

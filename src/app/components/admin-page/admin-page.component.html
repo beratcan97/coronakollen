@@ -1,0 +1,22 @@
+<h1 class="ml-5">Admin</h1>
+
+<form [formGroup]="form" class="mx-5">
+    <div class="form-group">
+        <label for="currentCasesInSweden">currentCasesInSweden</label>
+        <input type="number" class="form-control" id="currentCasesInSweden" placeholder="currentCasesInSweden" formControlName="currentCasesInSweden">
+    </div>
+    <div class="form-group">
+        <label for="deaths">deaths</label>
+        <input type="number" class="form-control" id="deaths" placeholder="deaths" formControlName="deaths">
+    </div>
+    <div class="form-group">
+        <label for="recovered">recovered</label>
+        <input type="number" class="form-control" id="recovered" placeholder="recovered" formControlName="recovered">
+    </div>
+    <div class="form-group">
+        <label for="severeCases">severeCases</label>
+        <input type="number" class="form-control" id="severeCases" placeholder="severeCases" formControlName="severeCases">
+    </div>
+</form>
+
+<button type="button" class="btn btn-primary ml-5" (click)="updateDatabase()">Save</button>

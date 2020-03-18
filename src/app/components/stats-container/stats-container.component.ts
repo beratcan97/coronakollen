@@ -53,7 +53,8 @@ export class StatsContainerComponent implements OnInit {
         recovered: this.currentCasesInSweden.recovered,
         severeCases: this.currentCasesInSweden.severeCases,
         displayDate: this.dateDATA.getFullYear() + '-' + (this.dateDATA.getMonth() + 1) + '-' + this.dateDATA.getDate(),
-        date: this.dateDATA
+        date: this.dateDATA,
+        updatedBy: 'user'
       };
 
         // Updates DB
