@@ -20,7 +20,7 @@ export class AdminPageComponent implements OnInit {
 
   ngOnInit() {
     this.createForm();
-    this.getCurrentCaseInSwedenAndPopulaateForm();
+    // this.getCurrentCaseInSwedenAndPopulaateForm();
   }
 
   createForm(): void {
@@ -50,7 +50,7 @@ export class AdminPageComponent implements OnInit {
   }
 
   updateDatabase(): void {
-    this.crudService.updateCurrentCaseInSweden(this.form.value);
+    // this.crudService.updateCurrentCaseInSweden(this.form.value);
     this.router.navigate(['..']);
   }
 }

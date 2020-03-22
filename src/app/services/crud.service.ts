@@ -10,58 +10,8 @@ export class CrudService {
   constructor(
     private angularFirestore: AngularFirestore) {}
 
-  /*
-  publish(currentCasesInSweden) {
-    this.angularFirestore.collection('currentCasesInSweden').add({
-      'currentCasesInSweden': currentCasesInSweden,
-      'displayDate': this.dateDATA.getFullYear() + '-' + (this.dateDATA.getMonth() + 1) + '-' + this.dateDATA.getDate(),
-      'date': this.dateDATA
-    })
-      .then(
-        res => {
-          console.log('published');
-        }
-      ),
-      err => {
-        console.log(err);
-      }
-  };
-  */
-
-  updateCurrentCaseInSweden(currentCasesInSwedenToUpdate) {
-    return this.angularFirestore.collection('currentCasesInSweden')
-      .doc('currentCasesInSwedenDoc').set(currentCasesInSwedenToUpdate);
-  }
-  
   getCurrentCaseInSweden() {
     return this.angularFirestore.collection('currentCasesInSweden')
       .doc('currentCasesInSwedenDoc').snapshotChanges();
   }
-
-  getCurrentCasesInSweden() {
-    return this.angularFirestore.collection('currentCasesInSweden', ref =>
-      ref
-        .orderBy('date')).snapshotChanges();
-  }
-
-  /*
-  createCustomer(customer: any): void {
-    this.customersRef.push(customer);
-  }
-
-  updateCustomer(key: string, value: any): Promise<void> {
-    return this.customersRef.update(key, value);
-  }
-
-  deleteCustomer(key: string): Promise<void> {
-    return this.customersRef.remove(key);
-  }
-
-  getCustomersList(): AngularFireList<any> {
-    return this.customersRef;
-  }
-
-  deleteAll(): Promise<void> {
-    return this.customersRef.remove();
-  }*/
 }
