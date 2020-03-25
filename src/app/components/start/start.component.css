@@ -4,3 +4,7 @@
     transform: translateX(-50%);
     pointer-events: none;
 }
+
+.toast-container {
+    width: 300px;
+}
