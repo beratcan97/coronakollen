@@ -46,7 +46,7 @@ export class ParticlesComponent implements OnInit {
             "color": "#000000"
           },
           "polygon": {
-            "nb_sides": 5
+            "nb_sides": 1
           },
           "image": {
             "src": "img/github.svg",
@@ -65,7 +65,7 @@ export class ParticlesComponent implements OnInit {
           }
         },
         "size": {
-          "value": 5,
+          "value": 3,
           "random": false,
           "anim": {
             "enable": false,
@@ -83,7 +83,7 @@ export class ParticlesComponent implements OnInit {
         },
         "move": {
           "enable": true,
-          "speed": 3,
+          "speed": 2,
           "direction": "none",
           "random": false,
           "straight": false,
@@ -110,7 +110,7 @@ export class ParticlesComponent implements OnInit {
         },
         "modes": {
           "grab": {
-            "distance": 400,
+            "distance": 100,
             "line_linked": {
               "opacity": 1
             }
@@ -123,11 +123,11 @@ export class ParticlesComponent implements OnInit {
             "speed": 3
           },
           "repulse": {
-            "distance": 100,
+            "distance": 80,
             "duration": 0.4
           },
           "push": {
-            "particles_nb": 4
+            "particles_nb": 2
           },
           "remove": {
             "particles_nb": 2
