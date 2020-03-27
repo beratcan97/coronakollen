@@ -1,10 +1,21 @@
 .main-container {
-    position: absolute;
+    position: fixed;
     left: 50%;
     transform: translateX(-50%);
     pointer-events: none;
+
+    animation-duration: 2s;
+    animation-name: slidein;
 }
 
 .toast-container {
     width: 300px;
 }
+
+@keyframes slidein {
+    from {
+        top: 100vh;
+    } to {
+        top: 1vh;
+    }
+  }
