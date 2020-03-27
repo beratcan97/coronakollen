@@ -5,9 +5,21 @@
     </h1>
     <p class="font-weight-lighter text-white m-0 mb-1">personer smittade i Sverige</p>
     <hr class="m-0 bg-white">
-    <p class="text-danger mt-1 mb-0">Dödsfall: {{currentCasesInSweden?.deaths}}</p>
-    <p class="text-warning mt-1 mb-0">Intensivvård: {{currentCasesInSweden?.severeCases}}</p>
-    <p class="text-success">Tillfrisknade: {{currentCasesInSweden?.recovered}}</p>
+
+    <div class="row my-3 statsContainer">
+        <div class="col-4 bg-danger d-flex align-items-center flex-column rounded-left pt-2">
+            <h3>{{currentCasesInSweden?.deaths}}</h3>
+            <p>Dödsfall</p>
+        </div>
+        <div class="col-4 bg-warning d-flex align-items-center flex-column pt-2">
+            <h3>{{currentCasesInSweden?.severeCases}}</h3>
+            <p>Intensivvård</p>
+        </div>
+        <div class="col-4 bg-success d-flex align-items-center flex-column rounded-right pt-2">
+            <h3>{{currentCasesInSweden?.recovered}}</h3>
+            <p>Tillfrisknade</p>
+        </div>
+    </div>
 </div>
 
 <ng-template #loadingSpinner>

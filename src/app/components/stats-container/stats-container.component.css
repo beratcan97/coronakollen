@@ -6,6 +6,10 @@ hr {
   width: 180px;
 }
 
+.statsContainer {
+  width: 300px;
+}
+
 .rotate {
   animation: rotation 8s infinite linear;
 }
