@@ -1,11 +1,6 @@
 .main-container {
-    position: fixed;
-    left: 50%;
-    transform: translateX(-50%);
-    pointer-events: none;
-
-    animation-duration: 2s;
-    animation-name: slidein;
+/*    animation-duration: 2s;
+    animation-name: slidein;*/
 }
 
 .toast-container {
@@ -14,8 +9,8 @@
 
 @keyframes slidein {
     from {
-        top: 100vh;
+        margin-top: 200px;
     } to {
-        top: 1vh;
+        margin-top: 30px;
     }
   }
