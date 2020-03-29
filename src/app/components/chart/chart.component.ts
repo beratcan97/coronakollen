@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CrudService } from "../../services/crud.service";
 import { Chart } from 'chart.js';
 
 @Component({
@@ -8,18 +9,34 @@ import { Chart } from 'chart.js';
 })
 export class ChartComponent implements OnInit {
   
+  currentCasesInSwedenHistory = [];
   chart;
 
-  constructor() { }
+  constructor(private crudService: CrudService) { }
 
   ngOnInit() {
+    this.getCurrentCaseInSweden();
+  }
+
+  getCurrentCaseInSweden(): void {
+    this.crudService.getHistoryData().subscribe(x => {
+      x.forEach(y => {
+        console.log(y.payload.doc.dm.proto.fields.currentCasesInSweden.stringValue);
+        this.currentCasesInSwedenHistory.push(y.payload.doc.dm.proto.fields.currentCasesInSweden.stringValue);
+      });
+    });
+  }
+
+  // console.log(doc.payload.doc.dm.proto.fields.currentCasesInSweden.stringValue);
+
+  chartConfiger() {
     this.chart = new Chart('canvas', {
       type: 'line',
       data: {
         labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
         datasets: [{
             label: '# of Votes',
-            data: [12, 19, 3, 5, 2, 3],
+            data: this.currentCasesInSwedenHistory,
             backgroundColor: [
                 'rgba(255, 99, 132, 0.2)',
                 'rgba(54, 162, 235, 0.2)',

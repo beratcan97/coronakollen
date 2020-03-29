@@ -14,4 +14,8 @@ export class CrudService {
     return this.angularFirestore.collection('currentCasesInSweden')
       .doc('currentCasesInSwedenDoc').snapshotChanges();
   }
+
+  getHistoryData() {
+    return this.angularFirestore.collection("stats").snapshotChanges()
+  }
 }
