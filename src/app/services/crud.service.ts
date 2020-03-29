@@ -16,6 +16,15 @@ export class CrudService {
   }
 
   getHistoryData() {
-    return this.angularFirestore.collection("stats").snapshotChanges()
+    let tmpArray = [];
+    this.angularFirestore.collection('stats').get()
+    .toPromise().then(snapshot => {
+        snapshot.docs.map(doc => {
+          tmpArray.push(doc.data());
+        });
+        console.log(tmpArray);
+      }).catch(function(error){
+        console.log("got an error",error);        
+    })
   }
 }
