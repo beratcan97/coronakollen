@@ -22,6 +22,7 @@ import { ToastContainerComponent } from './components/toast-container/toast-cont
 import { StatsContainerComponent } from './components/stats-container/stats-container.component';
 import { AdminPageComponent } from './components/admin-page/admin-page.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { ChartComponent } from './components/chart/chart.component';
 
 @NgModule({
   declarations: [
@@ -32,6 +33,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     ToastContainerComponent,
     StatsContainerComponent,
     AdminPageComponent,
+    ChartComponent,
   ],
   imports: [
     BrowserModule,
