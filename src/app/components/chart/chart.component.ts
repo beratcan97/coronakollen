@@ -15,6 +15,7 @@ export class ChartComponent implements OnInit {
   //Data
   cassesInSwedenHistory = [];
   datesHistory = [];
+  chartDots = [];
 
   constructor(private crudService: CrudService,private angularFirestore: AngularFirestore) { }
 
@@ -32,6 +33,8 @@ export class ChartComponent implements OnInit {
         this.dataAray.forEach(day => {
           this.cassesInSwedenHistory.push(day.currentCasesInSweden);
           this.datesHistory.push(day.date);
+
+          this.chartDots.push('rgba(255, 99, 132, 1)');
         });
 
         this.cassesInSwedenHistory.sort();
@@ -55,12 +58,8 @@ export class ChartComponent implements OnInit {
         datasets: [{
             label: 'Antal smittade',
             data: this.cassesInSwedenHistory,
-            backgroundColor: [
-                'rgba(255, 99, 132, 0.2)'
-            ],
-            borderColor: [
-                'rgba(255, 99, 132, 1)',
-            ],
+            backgroundColor: [],
+            borderColor: this.chartDots,
             borderWidth: 3
         }]
     },
