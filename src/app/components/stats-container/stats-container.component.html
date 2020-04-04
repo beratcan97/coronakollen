@@ -3,6 +3,7 @@
     <h1 class="text-white m-0" *ngIf="currentCasesInSweden; else loadingSpinner">
         {{currentCasesInSweden.currentCasesInSweden}} St
     </h1>
+    <p class="font-weight-lighter text-white mb-0">+{{currentCasesInSweden?.currentCasesInSweden - latestDateStates?.currentCasesInSweden}} idag</p>
     <p class="font-weight-lighter text-white m-0 mb-1">personer smittade i Sverige</p>
     <hr class="m-0 bg-white">
 
