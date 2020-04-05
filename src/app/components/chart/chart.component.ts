@@ -24,11 +24,23 @@ export class ChartComponent implements OnInit {
   }
 
   getCurrentCaseInSweden(): void {
+    let tmpLatestDateStates;
     this.angularFirestore.collection('stats').get()
     .toPromise().then(snapshot => {
         snapshot.docs.map(doc => {
           this.dataAray.push(doc.data());
         });
+
+        this.dataAray.forEach(day => {
+          if (!tmpLatestDateStates) {
+            tmpLatestDateStates = day;
+          }
+          if (day.date > tmpLatestDateStates.date) {
+            tmpLatestDateStates = day;
+          }
+        });
+
+        window.sessionStorage.setItem('tmpLatestDateStates', JSON.stringify(tmpLatestDateStates));
 
         this.dataAray.forEach(day => {
           this.cassesInSwedenHistory.push(day.currentCasesInSweden);

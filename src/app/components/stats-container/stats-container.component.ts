@@ -32,21 +32,6 @@ export class StatsContainerComponent implements OnInit {
   }
 
   getYesterdayStatus(): void {
-    let tmpArray = [];;
-    this.angularFirestore.collection('stats').get()
-    .toPromise().then(snapshot => {
-        snapshot.docs.map(doc => {
-          tmpArray.push(doc.data());
-        });
-        tmpArray.forEach(day => {
-          if (!this.latestDateStates) {
-            this.latestDateStates = day;
-          }
-          if (day.date > this.latestDateStates.date) {
-            this.latestDateStates = day;
-          }
-        });
-      });
+    this.latestDateStates = JSON.parse(window.sessionStorage.getItem('tmpLatestDateStates'));
   }
-
 }
