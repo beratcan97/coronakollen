@@ -3,26 +3,26 @@
     <h1 class="text-white m-0" *ngIf="currentCasesInSweden; else loadingSpinner">
         {{currentCasesInSweden.currentCasesInSweden}} St
     </h1>
-    <p class="font-weight-lighter text-white mb-0">+{{currentCasesInSweden?.currentCasesInSweden - latestDateStates?.currentCasesInSweden}} idag</p>
+    <p class="font-weight-lighter text-white mb-0">{{currentCasesInSweden?.currentCasesInSweden - latestDateStates?.currentCasesInSweden}} idag</p>
     <p class="font-weight-lighter text-white m-0 mb-1">personer smittade i Sverige</p>
     <hr class="m-0 bg-white">
 
     <div class="row my-3 statsContainer">
         <div class="col-4 bg-danger d-flex align-items-center flex-column rounded-left pt-2">
             <h3>{{currentCasesInSweden?.deaths}}</h3>
-            <p class="mb-0">+{{currentCasesInSweden?.deaths - latestDateStates?.deaths}} idag</p>
+            <p class="mb-0">{{currentCasesInSweden?.deaths - latestDateStates?.deaths}} nyidag</p>
             <hr class="m-0">
             <p>Dödsfall</p>
         </div>
         <div class="col-4 bg-warning d-flex align-items-center flex-column pt-2">
             <h3>{{currentCasesInSweden?.severeCases}}</h3>
-            <p class="mb-0">+{{currentCasesInSweden?.severeCases - latestDateStates?.severeCases}} idag</p>
+            <p class="mb-0">{{currentCasesInSweden?.severeCases - latestDateStates?.severeCases}} idag</p>
             <hr class="m-0">
             <p>Intensivvård</p>
         </div>
         <div class="col-4 bg-success d-flex align-items-center flex-column rounded-right pt-2">
             <h3>{{currentCasesInSweden?.recovered}}</h3>
-            <p class="mb-0">+{{currentCasesInSweden?.recovered - latestDateStates?.recovered}} idag</p>
+            <p class="mb-0">{{currentCasesInSweden?.recovered - latestDateStates?.recovered}} idag</p>
             <hr class="m-0">
             <p>Tillfrisknade</p>
         </div>
