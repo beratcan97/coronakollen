@@ -32,6 +32,10 @@ export class StatsContainerComponent implements OnInit {
   }
 
   getYesterdayStatus(): void {
-    this.latestDateStates = JSON.parse(window.sessionStorage.getItem('tmpLatestDateStates'));
+    setInterval(() => {
+      console.log('runs');
+      this.latestDateStates = JSON.parse(window.sessionStorage.getItem('tmpLatestDateStates'));
+    }, 1000);
+
   }
 }
