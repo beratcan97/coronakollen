@@ -48,8 +48,8 @@ export class ChartComponent implements OnInit {
 
           this.chartDots.push('rgba(255, 99, 132, 1)');
         });
-
-        this.cassesInSwedenHistory.sort();
+        
+        this.cassesInSwedenHistory.sort(function(a, b){return a - b});
         this.datesHistory.sort();
 
         console.log(this.cassesInSwedenHistory);
